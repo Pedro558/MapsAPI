@@ -1,37 +1,24 @@
 function initMap() {
-  /*const novaIguacu = { 
-    lat: -22.760133,
-    lng: -43.449341
-   };
-
-   const queimados = {
-    lat: -22.7131939,
-    lng: -43.5865575
-   }
 
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: novaIguacu
+    zoom: 6,
+    center: {lat: -22.9131524, lng: -44.0051082}
   });
   
-  const marker1 = new google.maps.Marker({
+  const marker = new google.maps.Marker({
     position: novaIguacu,
     map: map,
     icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
   });
   
-  const marker2 = new google.maps.Marker({
-    position: queimados,
-    map: map,
-  });
   
   const infoWindow = new google.maps.InfoWindow({
     content: '<h1>Nova Iguaçu, RJ</h1>'
   })
 
-  marker1.addListener('click', () =>{
-    infoWindow.open(map, marker1)
-  })*/
+  marker.addListener('click', () =>{
+    infoWindow.open(map, marker)
+  })
 }
 
 
