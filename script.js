@@ -5,7 +5,7 @@ function initMap() {
     center: {lat: -22.9131524, lng: -44.0051082}
   });
   
-  const marker = new google.maps.Marker({
+  /*const marker = new google.maps.Marker({
     position: novaIguacu,
     map: map,
     icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
@@ -18,7 +18,17 @@ function initMap() {
 
   marker.addListener('click', () =>{
     infoWindow.open(map, marker)
-  })
+  })*/
+
+  addMarker({lat: -22.7580653, lng: -43.4496179})
+
+  function addMarker(coords){
+    let marker = new google.maps.Marker({
+      position: coords,
+      map: map,
+      icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+    })
+  }
 }
 
 
