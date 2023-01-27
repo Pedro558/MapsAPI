@@ -25,9 +25,11 @@ function initMap() {
   markers.map((marker) => {
     addMarker(marker)
   })
-}
 
-window.initMap = initMap;
+  google.maps.event.addListener(map, 'click', (event) =>{
+    addMarker({coords: event.latLng})
+  })
+}
 
 const markers = [
   {
@@ -36,12 +38,4 @@ const markers = [
   }
 ]
 
-
-/*
-  const infoWindow = new google.maps.InfoWindow({
-    content: '<h1>Nova Iguaçu, RJ</h1>'
-  })
-
-  marker.addListener('click', () =>{
-    infoWindow.open(map, marker)
-  })*/
+window.initMap = initMap;
