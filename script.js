@@ -24,6 +24,16 @@ function initMap() {
     position: queimados,
     map: map,
   });
+  
+  const infoWindow = new google.maps.InfoWindow({
+    content: '<h1>Nova Iguaçu, RJ</h1>'
+  })
+
+  marker1.addListener('click', () =>{
+    infoWindow.open(map, marker1)
+  })
 }
+
+
 
 window.initMap = initMap;
