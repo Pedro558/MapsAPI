@@ -1,12 +1,27 @@
 function initMap() {
-  const uluru = { lat: -25.344, lng: 131.031 };
+  const novaIguacu = { 
+    lat: -22.760133,
+    lng: -43.449341
+   };
+
+   const queimados = {
+    lat: -22.7131939,
+    lng: -43.5865575
+   }
+
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
-    center: uluru,
+    center: novaIguacu
   });
   
-  const marker = new google.maps.Marker({
-    position: uluru,
+  const marker1 = new google.maps.Marker({
+    position: novaIguacu,
+    map: map,
+    icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+  });
+  
+  const marker2 = new google.maps.Marker({
+    position: queimados,
     map: map,
   });
 }
