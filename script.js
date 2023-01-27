@@ -1,5 +1,5 @@
 function initMap() {
-  const novaIguacu = { 
+  /*const novaIguacu = { 
     lat: -22.760133,
     lng: -43.449341
    };
@@ -31,7 +31,7 @@ function initMap() {
 
   marker1.addListener('click', () =>{
     infoWindow.open(map, marker1)
-  })
+  })*/
 }
 
 
