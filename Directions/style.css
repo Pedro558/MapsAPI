@@ -31,3 +31,10 @@
 .black{
   color: black;
 }
+
+.container-fluid #googleMap{
+  border: 1px solid red;
+  margin-top: 60px;
+  height: 400px;
+  width: 100%;
+}
