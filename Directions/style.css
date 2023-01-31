@@ -1,3 +1,33 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+  color: #5bc0de;
+}
+
+.navbar .jumbotron {
+  background-color: transparent;
+  padding: 10px;
+  margin: 0;
+}
+
+.navbar .jumbotron h1{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.navbar .jumbotron p{
+ font-size: 1em; 
+}
+
+.navbar .jumbotron h1,p{
+  text-align: center;
+} 
+
 .black{
   color: black;
 }
