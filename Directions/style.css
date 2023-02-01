@@ -38,3 +38,24 @@
   height: 400px;
   width: 100%;
 }
+
+.navbar .label{
+  font-size: 125%;
+  margin: 0;
+  padding: 0;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navbar .wrap{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .wrap .col-xs-4{
+  width: 60%;
+}
