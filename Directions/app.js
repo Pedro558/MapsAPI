@@ -16,5 +16,8 @@ let map = new google.maps.Map(
   mapOptions
 )
 
-//create directions service
+// create directions service
 let directionsService = new google.maps.DirectionsService()
+
+// create directions renderer 
+let directionsDisplay = new google.maps.DirectionsRenderer()
