@@ -21,3 +21,6 @@ let directionsService = new google.maps.DirectionsService()
 
 // create directions renderer 
 let directionsDisplay = new google.maps.DirectionsRenderer()
+
+// bind the directionsRenderer to the map
+directionsDisplay.setMap(map)
