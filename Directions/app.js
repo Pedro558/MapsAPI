@@ -14,4 +14,7 @@ let mapOptions = {
 let map = new google.maps.Map(
   document.getElementById('googleMap'),
   mapOptions
-  )
+)
+
+//create directions service
+let directionsService = new google.maps.DirectionsService()
