@@ -51,6 +51,20 @@ function calcRoute(){
       Driving Distance: ${result.routes[0].legs[0].distance.text}
       Duration: ${result.routes[0].legs[0].duration.text}
       `
+
+      //display route
+      directionsDisplay.setDirections(result)
+    } else{
+      // delete route from map
+      directionsDisplay.setDirections({ routes: []})
+
+      // center map in spain
+      map.setCenter(myLatLng)
+
+      //add error message
+      output.innerHTML = `
+        <div class='alert-danger'>Couldn't retrieve driving distance</div>
+      `
     }
   })
 }
