@@ -1,7 +1,3 @@
-// getting 'from' and 'to'
-const from = document.getElementById('from').value
-const to = document.getElementById('to').value
-
 // map options
 let myLatLng = {
   lat: 38.3460,
@@ -33,23 +29,24 @@ directionsDisplay.setMap(map)
 function calcRoute(){
   // create request
   let request = {
-    origin: from,
-    destination: to,
+    origin: document.getElementById('from').value,
+    destination: document.getElementById("to").value,
     travelMode: google.maps.TravelMode.DRIVING,
     unitSystem: google.maps.UnitSystem.IMPERIAL
   }
 
    //pass request to route
-  directionsService.route(request, (result, status) =>{
-    if(status == google.maps.DirectionsStatus.Ok){
+  directionsService.route(request, function (result, status){
+    if(status == google.maps.DirectionsStatus.OK){
       //get distance and time
       const output = document.querySelector('#output')
       output.innerHTML = `
-      <div class='alert-info'>
-      From: ${from}
-      To: ${to}
-      Driving Distance: ${result.routes[0].legs[0].distance.text}
-      Duration: ${result.routes[0].legs[0].duration.text}
+      <section class='alert-info'>
+        <p>From: ${document.getElementById("from").value}</p>
+        <p>To: ${document.getElementById("to").value}</p>
+        <p>Driving Distance: ${result.routes[0].legs[0].distance.text}</p>
+        <p>Duration: ${result.routes[0].legs[0].duration.text}</p>
+      </section>
       `
 
       //display route
@@ -68,3 +65,14 @@ function calcRoute(){
     }
   })
 }
+
+// auto complete
+let options = {
+  types: ['(cities)']
+}
+
+let input1 = from;
+let autocomplete1 = new google.maps.places.Autocomplete(input1, options);
+
+let input2 = to;
+let autocomplete2 = new google.maps.places.Autocomplete(input2, options);
