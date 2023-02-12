@@ -1,12 +1,12 @@
 // map options
 let myLatLng = {
-  lat: 38.3460,
-  lng: -0.4907
+  lat: -22.757295,
+  lng: -43.4582887
 }
 
 let mapOptions = {
   center: myLatLng,
-  zoom: 6,
+  zoom: 10,
   mapTypeId: google.maps.MapTypeId.ROADMAP
 }
 
@@ -42,10 +42,10 @@ function calcRoute(){
       const output = document.querySelector('#output')
       output.innerHTML = `
       <section class='alert-info'>
-        <p>From: ${document.getElementById("from").value}</p>
-        <p>To: ${document.getElementById("to").value}</p>
-        <p>Driving Distance: ${result.routes[0].legs[0].distance.text}</p>
-        <p>Duration: ${result.routes[0].legs[0].duration.text}</p>
+        <p><b>From:</b> ${document.getElementById("from").value}</p>
+        <p><b>To:</b> ${document.getElementById("to").value}</p>
+        <p><b>Driving Distance:</b> ${result.routes[0].legs[0].distance.text}</p>
+        <p><b>Duration:</b> ${result.routes[0].legs[0].duration.text}</p>
       </section>
       `
 

@@ -72,3 +72,15 @@
 .btn{
   width: 20vw;
 }
+
+.navbar .alert-info{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 5px;
+}
+
+.navbar .alert-info p{
+  margin: 0;
+  font-size: 20px;
+}
